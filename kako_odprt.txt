@@ -1,0 +1,5 @@
+v terminalu poženeš "python -m http.server 8000" in odpri localhost http://localhost:8000
+
+ctrl + c, v terminal da ugasne srvr
+
+navbar pa footer se nalagata prek javascripta 
