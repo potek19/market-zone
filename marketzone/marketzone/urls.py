@@ -18,6 +18,9 @@ urlpatterns = [
     path('checkout/', store_views.checkout_steps, name="checkout"),
 
     path('contact/', contact_views.contact_form, name="contact_form"),
+
+    path('about/', store_views.about, name="about"),
+    path('services/', store_views.services, name="services"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -11,6 +11,8 @@ templates/products.html
 templates/cart.html
 templates/contact.html  <- ta gre v templates ki je v contact
 templates/checkout.html
+templates/about.html
+templates/services.html
 
 Vsi statični elementi kot so css in js grejo v file 
 /static/

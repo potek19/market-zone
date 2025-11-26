@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Product, Cart, CartItem
 
+
 def home(request):
     return render(request, "home.html")
 
@@ -40,3 +41,10 @@ def cart_view(request):
 
 def checkout_steps(request):
     return render(request, "checkout.html")
+
+
+def about(request):
+    return render(request, 'about.html')
+
+def services(request):
+    return render(request, 'services.html')
