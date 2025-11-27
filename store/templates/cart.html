@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Market Zone - Košarica{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1>Košarica</h1>
+    <p>Prikaz izdelkov v košarici.</p>
+    
+    {% if cart.items.all %}
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Izdelek</th>
+                                <th>Cena</th>
+                                <th>Količina</th>
+                                <th>Skupaj</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in cart.items.all %}
+                            <tr>
+                                <td>
+                                    {% if item.product.image %}
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" style="width: 50px; height: 50px; object-fit: cover;">
+                                    {% endif %}
+                                    {{ item.product.name }}
+                                </td>
+                                <td>{{ item.product.price }} €</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{{ item.product.price|floatformat:2 }} €</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Povzetek naročila</h5>
+                    <hr>
+                    <p><strong>Skupaj: </strong>
+                        {% widthratio cart.items.all|length 1 1 %} izdelkov
+                    </p>
+                    <a href="{% url 'checkout' %}" class="btn btn-primary w-100">Nadaljuj na blagajno</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info mt-4">
+        Vaša košarica je prazna. <a href="{% url 'categories' %}">Začnite z nakupovanjem</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
