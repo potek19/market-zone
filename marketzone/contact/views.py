@@ -18,4 +18,4 @@ def contact_form(request):
 
         success = True
 
-    return render(request, "contact.html", {"success": success})
+    return render(request, "kontakt.html", {"success": success})

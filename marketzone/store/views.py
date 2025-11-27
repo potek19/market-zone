@@ -3,7 +3,7 @@ from .models import Category, Product, Cart, CartItem
 
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "index.html")
 
 def categories(request):
     categories = Category.objects.all()
@@ -13,6 +13,14 @@ def products(request, category_id):
     category = get_object_or_404(Category, id=category_id)
     products = category.products.all()
     return render(request, "products.html", {"category": category, "products": products})
+
+def trgovina(request):
+    categories = Category.objects.all()
+    products = Product.objects.all()
+    return render(request, "trgovina.html", {
+        "categories": categories,
+        "products": products,
+    })
 
 
 # Košarica
@@ -37,14 +45,14 @@ def add_to_cart(request, product_id):
 
 def cart_view(request):
     cart = _get_cart(request)
-    return render(request, "cart.html", {"cart": cart})
+    return render(request, "kosarica.html", {"cart": cart})
 
 def checkout_steps(request):
     return render(request, "checkout.html")
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'o-nas.html')
 
 def services(request):
-    return render(request, 'services.html')
+    return render(request, 'storitev.html')
