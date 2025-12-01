@@ -117,3 +117,208 @@ footer ul li {
         margin: 0.5rem 0;
     }
 }
+
+/* Bannerji */
+.banner-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .banner-img {
+        height: 250px;
+    }
+}
+
+/* Categorije */
+.category-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(81, 112, 255, 0.2);
+    border-color: var(--primary);
+}
+
+.category-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.category-name {
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.category-desc {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Kartice za izdelke */
+.product-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-muted);
+}
+
+.product-body {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    color: var(--text-dark);
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Koraki ob zaključku nakupa */
+.checkout-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--border);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.step.completed .step-circle {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+.step-label {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.step.active .step-label {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.step.completed .step-label {
+    color: var(--success);
+}
+
+.step-line {
+    width: 100px;
+    height: 2px;
+    background-color: var(--border);
+    margin: 0 1rem;
+    position: relative;
+    top: -15px;
+}
+
+.step-line.completed {
+    background-color: var(--success);
+}
+
+@media (max-width: 768px) {
+    .checkout-steps {
+        transform: scale(0.8);
+    }
+    
+    .step-line {
+        width: 50px;
+    }
+}
+

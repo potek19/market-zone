@@ -29,7 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link cart-link" href="{% url 'cart_view' %}">
                         <i class="bi bi-cart3"></i>
-                        <span class="cart-badge" id="cart-count">0</span>
+                        {% if cart_count > 0 %}
+                        <span class="cart-badge">{{ cart_count }}</span>
+                        {% endif %}
                     </a>
                 </li>
             </ul>
