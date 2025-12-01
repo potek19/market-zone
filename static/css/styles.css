@@ -119,14 +119,15 @@ footer ul li {
 }
 
 /* Bannerji */
-.banner-img {
-    height: 400px;
+.carousel-inner img {
+    height: 600px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
-    .banner-img {
-        height: 250px;
+    .carousel-inner img {
+        height: 200px;
     }
 }
 
@@ -135,7 +136,7 @@ footer ul li {
     background: var(--white);
     border: 2px solid var(--border);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     transition: all 0.3s ease;
     height: 100%;
@@ -148,20 +149,35 @@ footer ul li {
 }
 
 .category-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .category-name {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1rem;
 }
 
 .category-desc {
     color: var(--text-muted);
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    .category-icon {
+        font-size: 2rem;
+    }
+    
+    .category-name {
+        font-size: 0.9rem;
+    }
 }
 
 /* Kartice za izdelke */
@@ -321,4 +337,3 @@ footer ul li {
         width: 50px;
     }
 }
-
