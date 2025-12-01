@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sl">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Zone - Storitve</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    {% include "components/navbar.html" %}
+
+    <main class="py-4">
+
+        <style>
+        .card {
+            border-width: 3px;
+        }
+        .card-img-top {
+            object-fit: cover;
+            height: 300px;
+        }
+        </style>
+
+        <div class="container my-5">
+            <h1>Storitve</h1>
+            <p>
+                V MarketZone verjamemo, da dobra nakupna izkušnja ni samo v izbiri pravega
+                izdelka, ampak tudi v podpori, ki jo dobite ob tem. Zato vam poleg široke
+                ponudbe tehnologije, gospodinjskih aparatov in dodatkov ponujamo tudi
+                storitve, ki vaš nakup naredijo enostavnejši, hitrejši in bolj zanesljiv.
+                Od svetovanja pri izbiri, do hitre dostave na dom ter različnih možnosti
+                plačila – naš cilj je, da vam prihranimo čas in poskrbimo, da vse deluje
+                brez zapletov.
+            </p>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4">
+                
+                <!-- Storitev 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev1.png' %}" class="card-img-top" alt="Storitev 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Svetovanje</h5>
+                            <p class="card-text">Hitro in učinkovito svetovanje za vaše potrebe.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storitev 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev2.png' %}" class="card-img-top" alt="Storitev 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dostava</h5>
+                            <p class="card-text">Hitra dostava na dom, da prihranite čas in živce.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storitev 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev3.png' %}" class="card-img-top" alt="Storitev 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Montaža</h5>
+                            <p class="card-text">Pomoč pri montaži in inštalaciji.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storitev 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev4.png' %}" class="card-img-top" alt="Storitev 4">
+                        <div class="card-body">
+                            <h5 class="card-title">24/7 tehnična podpora</h5>
+                            <p class="card-text">Na voljo vedno — za vsako vprašanje ali težavo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storitev 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev5.png' %}" class="card-img-top" alt="Storitev 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Zavarovanje izdelkov</h5>
+                            <p class="card-text">Možnost zavarovanja nove naprave — široka ponudba paketov.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storitev 6 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-primary">
+                        <img src="{% static 'images/service-icons/storitev6.png' %}" class="card-img-top" alt="Storitev 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Staro za novo</h5>
+                            <p class="card-text">Prinesite staro napravo in prejmite bon za nakup nove!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    {% include "components/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/components.js' %}"></script>
+</body>
+</html>
